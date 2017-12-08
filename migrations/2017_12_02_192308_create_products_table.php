@@ -23,7 +23,7 @@ class CreateProductsTable extends Migration
             $table->string('cover')->default('')->comment('产品封面图');
             $table->string('imgs')->default('')->comment('产品细节图');
             $table->string('intro_title')->default('')->comment('简介Title');
-            $table->string('intro')->default('')->comment('产品简介');
+            $table->text('intro')->comment('产品简介');
             $table->string('attr')->default('')->comment('产品属性');
             $table->integer('price')->default(0)->comment('价格(分)');
 

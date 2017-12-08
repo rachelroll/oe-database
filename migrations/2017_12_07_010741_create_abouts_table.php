@@ -16,7 +16,7 @@ class CreateAboutsTable extends Migration
         Schema::create('abouts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title')->default('')->comment('导航名称');
-            $table->text('content')->default('')->comment('具体内容');
+            $table->text('content')->comment('具体内容');
 
             $table->timestamps();
         });
