@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('name')->default('')->comment('产品名称');
             $table->string('model')->default('')->comment('型号');
             $table->string('buy_url')->default('')->comment('购买连接');
+            $table->string('tm_url')->default('')->comment('天猫连接');
             $table->tinyInteger('cat_id')->default(0)->comment('分类ID');
             $table->tinyInteger('is_new')->default(0)->comment('是否新品 0:否 1:是');
             $table->tinyInteger('position')->default(0)->comment('产品在首页位置');
