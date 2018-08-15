@@ -20,7 +20,9 @@ class CreateCategoriesTable extends Migration
             $table->string('layout')->default('')->comment('每行几个产品,用竖线分隔,');
             $table->tinyInteger('sort')->default(0)->comment('分类排序');
             $table->string('name')->default('')->comment('分类名称');
-            $table->string('intro',1000)->default('')->comment('分类简介');
+            $table->string('name_en')->default('')->comment('分类名称英文');
+            $table->text('intro')->nullable()->comment('分类简介');
+            $table->text('intro_en')->nullable()->comment('分类简介英文');
 
             $table->timestamps();
         });

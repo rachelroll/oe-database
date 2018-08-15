@@ -34,7 +34,8 @@ class CreateProductsTable extends Migration
             $table->string('video_ogv')->default('')->comment('视频ogv');
             $table->string('video_webm')->default('')->comment('视频webm');
             $table->string('intro_title')->default('')->comment('简介');
-            $table->text('intro')->comment('产品详情');
+            $table->text('intro')->nullable()->comment('产品详情');
+            $table->text('intro_en')->nullable()->comment('product detail');
             $table->string('attr')->default('')->comment('产品属性');
             $table->integer('price')->default(0)->comment('价格(分)');
             $table->tinyInteger('rating')->default(0)->comment('推荐评级');
